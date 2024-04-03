@@ -649,22 +649,7 @@ function oppo_configure_zram_parameters() {
             echo 1 > /sys/block/zram0/use_dedup
         fi
 
-        if [ $MemTotal -le 524288 ]; then
-            #config 384MB zramsize with ramsize 512MB
-            echo 402653184 > /sys/block/zram0/disksize
-        elif [ $MemTotal -le 1048576 ]; then
-            #config 768MB zramsize with ramsize 1GB
-            echo 805306368 > /sys/block/zram0/disksize
-        elif [ $MemTotal -le 2097152 ]; then
-            #config 1GB+256MB zramsize with ramsize 2GB
-            echo lz4 > /sys/block/zram0/comp_algorithm
-            echo 1342177280 > /sys/block/zram0/disksize
-        elif [ $MemTotal -le 3145728 ]; then
-            #config 1.9GB zramsize with ramsize 3GB
-            echo 2040109466 > /sys/block/zram0/disksize
-            #config 680M almk threshold with ramsize 3GB
-            echo 174080 > /sys/module/lowmemorykiller/parameters/almk_totalram_threshold_pages
-        elif [ $MemTotal -le 4194304 ]; then
+        if [ $MemTotal -le 4194304 ]; then
             #config 2.5GB zram size with memory 4 GB
             echo 2684354560 > /sys/block/zram0/disksize
             #config 800M almk threshold with ramsize 4GB
