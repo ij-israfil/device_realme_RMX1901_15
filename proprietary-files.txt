@@ -1386,7 +1386,7 @@ odm/firmware/tp/18041/FW_S3706_SAMSUNG.img
 odm/firmware/tp/18041/FW_S3706_SAMSUNG_FAE.img
 odm/firmware/tp/18041/LIMIT_S3706_SAMSUNG.img
 
-# Thermal
+# Thermal from snt_sprout - qssi-user-13-TKQ1.220807.001-00WW_2_450-release-keys
 vendor/bin/thermal-engine
 vendor/etc/init/init_thermal-engine.rc
 vendor/etc/thermal-engine.conf
