@@ -6,3 +6,7 @@ persist.vendor.dpm.nsrm.bkg.evt=3955
 # Telephony
 ro.telephony.sim_slots.count=2
 telephony.active_modems.max_count=2
+
+# Blurs
+ro.sf.blurs_are_expensive=1
+ro.surface_flinger.supports_background_blur=1
