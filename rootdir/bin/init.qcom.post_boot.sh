@@ -42,11 +42,11 @@ function oppo_configure_zram_parameters() {
         fi
 
         if [ $MemTotal -le 4194304 ]; then
-            #config 2.5GB zram size with memory 4 GB
-            echo 2684354560 > /sys/block/zram0/disksize
+            #config 3.5GB zram size with memory 4 GB
+            echo 3758096384 > /sys/block/zram0/disksize
         elif [ $MemTotal -le 6291456 ]; then
-            #config 3GB zram size with memory 6 GB
-            echo 3221225472 > /sys/block/zram0/disksize
+            #config 3.5GB zram size with memory 6 GB
+            echo 3758096384 > /sys/block/zram0/disksize
         else
             #config 4GB zram size with memory greater than 6GB
             echo 4294967296 > /sys/block/zram0/disksize
